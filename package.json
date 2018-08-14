@@ -1,13 +1,31 @@
 {
   "name": "burger-app",
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "description": "Basic mern application for burger building app",
+  "main": "server.js",
   "scripts": {
-    "client": "cd client && npm start",
+    "client-install": "npm install --prefix client",
+    "start": "node server.js",
     "server": "nodemon server.js",
-    "dev": "concurrently --kill-others-on-fail \"npm server\" \"npm client\""
+    "client": "npm start --prefix client",
+    "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
+  "author": "Alexandre Leibler",
+  "license": "MIT",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
     "concurrently": "^3.6.1",
+    "express": "^4.16.3",
+    "gravatar": "^1.6.0",
+    "jsonwebtoken": "^8.3.0",
+    "mongoose": "^5.2.8",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "validator": "^10.5.0"
+  },
+  "devDependencies": {
     "nodemon": "^1.18.3"
   }
 }
