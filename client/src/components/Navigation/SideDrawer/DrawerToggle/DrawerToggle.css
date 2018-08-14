@@ -1,0 +1,96 @@
+/* NOTE: Tried to make an animating drawer toggle
+.DrawerToggle {
+  width: 40px;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+  box-sizing: border-box;
+  transform: rotate(0deg);
+  transition: .5s ease-in-out;
+  cursor: pointer;
+}
+
+.DrawerToggle div {
+  width: 90%;
+  height: 3px;
+  transform: rotate(0deg);
+  transition: .25 ease-in-out;
+}
+
+.DrawerToggle.Open {
+  height: 100%;
+}
+
+.DrawerToggle.Open div {
+  background-color: white;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+}
+
+.DrawerToggle.Close {
+  position: fixed;
+  display: block;
+  height: 7%;
+  margin-left: calc(70% - 40px);
+  z-index: 600; 
+}
+
+.DrawerToggle.Close div {
+  display: block;
+  position: absolute;
+  background-color: black;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+  height: 9px;
+}
+
+.DrawerToggle.Close div:nth-child(1) {
+  top: calc((100% - 9px)/2);
+  transform: rotate(135deg);
+}
+
+.DrawerToggle.Close div:nth-child(2) {
+  opacity: 0;
+  left: -40px;
+}
+
+.DrawerToggle.Close div:nth-child(3) {
+  top: calc((100% - 9px)/2);
+  transform: rotate(-135deg);
+}
+
+
+@media (min-width: 500px) {
+  .DrawerToggle {
+    display: none;
+  }
+}
+*/
+
+.DrawerToggle {
+  width: 40px;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.DrawerToggle div {
+  width: 90%;
+  height: 3px;
+  background-color: white;
+}
+
+@media (min-width: 500px) {
+  .DrawerToggle {
+    display: none;
+  }
+}
+
+
